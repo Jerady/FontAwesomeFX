@@ -16,7 +16,10 @@ if (!hasProperty('mainClass')) {
     ext.mainClass = 'de.jensd.fx.glyphs.demo.browser.GlyphsBrowserApp'
 }
 
-
+task execute(type:JavaExec) {
+   main = mainClass
+   classpath = sourceSets.main.runtimeClasspath
+}
 
 dependencies {
     compile 'de.jensd:fontawesomefx-fontawesome:4.6.3'
